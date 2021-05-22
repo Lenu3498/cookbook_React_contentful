@@ -4,6 +4,8 @@ import marked from 'marked';
 const Post = ({ article }) => {
   console.log(article)
   const {name, featuredImage, description, category} = article.fields
+  const {id} = article.sys
+  console.log(id)
   const postDescription = marked(description)
   return (
     <div>
