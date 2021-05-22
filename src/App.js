@@ -23,18 +23,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div>
+
           <header>
-            <div>
               <span>Cookbook</span>
-            </div>
           </header>
           <main>
             <div>
               <Posts posts={this.state.articles} />
             </div>
           </main>
-        </div>
+          <footer>
+            <p>© 2021 Cookbook 2.0</p>
+          </footer>
       </div>
     );
   }
