@@ -1,10 +1,10 @@
 import React from 'react';
-import Post from './Post';
+import Card from './Card';
 
 const Posts = ({ posts }) => {
   return (
     <div>
-      {posts.map((article, index) => <Post article={article} key={index} />)}
+      {posts.map((article, index) => <Card article={article} key={index} />)}
     </div>
   )
 }
