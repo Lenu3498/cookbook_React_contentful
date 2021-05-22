@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+header {
+  background-color: black;
+  color: white;
+  min-height: 40px;
+}
 
 footer {
   position: fixed;

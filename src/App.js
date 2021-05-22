@@ -25,7 +25,7 @@ class App extends React.Component {
       <div className="App">
 
           <header>
-              <span>Cookbook</span>
+              <h1>Cookbook</h1>
           </header>
           <main>
             <div>
