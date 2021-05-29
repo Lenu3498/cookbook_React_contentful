@@ -1,9 +1,11 @@
 import React from "react";
 import marked from "marked";
+import { useParams } from "react-router-dom";
 
 const Recipe = ({ article }) => {
-  console.log(article);
-  const {
+  const { recipeName } = useParams();
+  //console.log(article);
+  /*const {
     name,
     featuredImage,
     shortDescription,
@@ -12,13 +14,13 @@ const Recipe = ({ article }) => {
     time,
     category,
   } = article.fields;
-  const { id } = article.sys;
-  console.log(id);
+  //const { id } = article.sys;
+  //console.log(id);
   const postDescription = marked(description);
-  const recipeIngredients = marked(ingredientsList);
+  const recipeIngredients = marked(ingredientsList);*/
   return (
     <div>
-      <h2>{name}</h2>
+      {/*<h2>{name} </h2>
       <p>{time} Minutes</p>
       <p>{shortDescription}</p>
       {featuredImage && (
@@ -31,10 +33,8 @@ const Recipe = ({ article }) => {
       )}
       <section dangerouslySetInnerHTML={{ __html: recipeIngredients }} />
       <section dangerouslySetInnerHTML={{ __html: postDescription }} />
-
-      {/* <p>{ingredients}</p> */}
-      {/* <p>{description}</p> */}
-      <p>{category}</p>
+      <p>{category}</p>*/}
+      <h2> Title - {recipeName}</h2>
     </div>
   );
 };
