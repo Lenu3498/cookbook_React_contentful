@@ -15,7 +15,7 @@ const Recipe = ({ articles }) => {
   })
   //.field.name = recipeName
   //console.log(article);
-  /*const {
+  const {
     name,
     featuredImage,
     shortDescription,
@@ -23,14 +23,14 @@ const Recipe = ({ articles }) => {
     ingredientsList,
     time,
     category,
-  } = article.fields;*/
+  } = myRecipe;
   //const { id } = article.sys;
   //console.log(id);
-  /*const postDescription = marked(description);
-  const recipeIngredients = marked(ingredientsList);*/
+  const postDescription = marked(description);
+  const recipeIngredients = marked(ingredientsList);
   return (
     <div>
-      {/*<h2>{myRecipe.name} </h2>
+      <h2>{myRecipe.name} </h2>
       <p>{time} Minutes</p>
       <p>{shortDescription}</p>
       {featuredImage && (
@@ -43,8 +43,7 @@ const Recipe = ({ articles }) => {
       )}
       <section dangerouslySetInnerHTML={{ __html: recipeIngredients }} />
       <section dangerouslySetInnerHTML={{ __html: postDescription }} />
-      <p>{category}</p>*/}
-      <h2> Title - {recipeName}</h2>
+      <p>{category}</p>
     </div>
   );
 };
