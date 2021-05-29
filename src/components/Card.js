@@ -13,7 +13,7 @@ const RecipeCard = ({ article }) => {
       {/*<h2>{name}</h2>
       {featuredImage && <img src={featuredImage.fields.file.url} alt={name} title={name} width='400'/>}
       s<p>{shortDescription}</p>*/}
-      <Card style={{ width: '300px', margin: 'auto' }}>
+      <Card className="CardBox">
       <Card.Img variant="top" src={featuredImage.fields.file.url} alt={name} title={name} />
       <Card.Body>
       <Card.Title>{name}</Card.Title>
