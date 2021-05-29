@@ -2,8 +2,18 @@ import React from "react";
 import marked from "marked";
 import { useParams } from "react-router-dom";
 
-const Recipe = ({ article }) => {
+const Recipe = ({ articles }) => {
   const { recipeName } = useParams();
+  let myRecipe
+  articles && articles.map((article) => {
+    if(
+      article.fields.name === recipeName
+    ){
+      myRecipe = article.fields
+      return myRecipe
+    }
+  })
+  //.field.name = recipeName
   //console.log(article);
   /*const {
     name,
@@ -13,14 +23,14 @@ const Recipe = ({ article }) => {
     ingredientsList,
     time,
     category,
-  } = article.fields;
+  } = article.fields;*/
   //const { id } = article.sys;
   //console.log(id);
-  const postDescription = marked(description);
+  /*const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);*/
   return (
     <div>
-      {/*<h2>{name} </h2>
+      {/*<h2>{myRecipe.name} </h2>
       <p>{time} Minutes</p>
       <p>{shortDescription}</p>
       {featuredImage && (

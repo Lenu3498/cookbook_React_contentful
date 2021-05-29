@@ -52,7 +52,7 @@ class App extends React.Component {
           <About />
         </Route>
         <Route path="/:recipeName">
-          <Recipe />
+          <Recipe articles={this.state.articles} />
         </Route>
         </Switch>
         </main>
