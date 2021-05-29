@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from './Card';
+import RecipeCard from './Card';
 
 const Posts = ({ posts }) => {
   return (
-    <div>
-      {posts.map((article, index) => <Card article={article} key={index} />)}
+    <div style={{ marginbottom: '20px' }}>
+      {posts.map((article, index) => <RecipeCard article={article} key={index} />)}
     </div>
   )
 }
