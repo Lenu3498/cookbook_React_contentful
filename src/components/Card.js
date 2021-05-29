@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import "./Card.css";
+import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ article }) => {
   console.log(article)
@@ -20,7 +21,9 @@ const RecipeCard = ({ article }) => {
       <Card.Text>
       {shortDescription}
       </Card.Text>
+      <Link to={`/${name}`}>
       <Button variant="outline-secondary">Cook me</Button>
+      </Link>
       </Card.Body>
       </Card>
     </div>
