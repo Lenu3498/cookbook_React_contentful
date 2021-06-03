@@ -1,8 +1,20 @@
 import React from "react";
 import marked from "marked";
+import { useParams } from "react-router-dom";
 
-const Recipe = ({ article }) => {
-  console.log(article);
+const Recipe = ({ articles }) => {
+  window.scrollTo(0, 0);
+  const { recipeName } = useParams();
+  let myRecipe;
+  articles &&
+    articles.map((article) => {
+      if (article.fields.name === recipeName) {
+        myRecipe = article.fields;
+        return myRecipe;
+      }
+    });
+  //.field.name = recipeName
+  //console.log(article);
   const {
     name,
     featuredImage,
@@ -11,14 +23,14 @@ const Recipe = ({ article }) => {
     ingredientsList,
     time,
     category,
-  } = article.fields;
-  const { id } = article.sys;
-  console.log(id);
+  } = myRecipe;
+  //const { id } = article.sys;
+  //console.log(id);
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (
     <div>
-      <h2>{name}</h2>
+      <h2>{myRecipe.name} </h2>
       <p>{time} Minutes</p>
       <p>{shortDescription}</p>
       {featuredImage && (
@@ -31,9 +43,6 @@ const Recipe = ({ article }) => {
       )}
       <section dangerouslySetInnerHTML={{ __html: recipeIngredients }} />
       <section dangerouslySetInnerHTML={{ __html: postDescription }} />
-
-      {/* <p>{ingredients}</p> */}
-      {/* <p>{description}</p> */}
       <p>{category}</p>
     </div>
   );
