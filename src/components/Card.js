@@ -5,10 +5,10 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const RecipeCard = ({ article }) => {
-  console.log(article);
+  // console.log(article);
   const { name, featuredImage, shortDescription, slug } = article.fields;
   const { id } = article.sys;
-  console.log(id);
+  // console.log(id);
   return (
     <div>
       {/*<h2>{name}</h2>

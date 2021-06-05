@@ -18,7 +18,7 @@ class App extends React.Component {
     client
       .getEntries()
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({
           articles: response.items,
           loading: false,
@@ -38,7 +38,7 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <Link exact to="/" activeClassName="active">
+            <Link to="/">
               <h1>Cookbook</h1>
             </Link>
           </header>
@@ -46,7 +46,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <div>
-                  <Posts posts={this.state.articles} />
+                  <Posts articles={this.state.articles} />
                 </div>
               </Route>
               <Route path="/about">
@@ -58,9 +58,7 @@ class App extends React.Component {
             </Switch>
           </main>
           <footer>
-            <Link to="/about" activeClassName="active">
-              About
-            </Link>
+            <Link to="/about">About</Link>
             <p>© 2021 Cookbook 2.0</p>
           </footer>
         </div>
