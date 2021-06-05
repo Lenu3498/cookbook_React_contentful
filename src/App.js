@@ -6,6 +6,7 @@ import About from "./components/About";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Recipe from "./components/Recipe";
 
+
 class App extends React.Component {
   state = {
     articles: [],
@@ -15,7 +16,6 @@ class App extends React.Component {
   //const [isLoading, setIsloading] = useState(true);
 
   componentDidMount() {
-    // window.scrollTo(0, 0);
     client
       .getEntries()
       .then((response) => {
@@ -24,6 +24,7 @@ class App extends React.Component {
           articles: response.items,
           loading: false,
         });
+
       })
       .catch(console.error);
   }

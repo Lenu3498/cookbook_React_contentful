@@ -13,8 +13,7 @@ const Recipe = ({ articles }) => {
         return myRecipe;
       }
     });
-  //.field.name = recipeName
-  //console.log(article);
+
   const {
     name,
     featuredImage,
@@ -24,8 +23,6 @@ const Recipe = ({ articles }) => {
     time,
     category,
   } = myRecipe;
-  //const { id } = article.sys;
-  //console.log(id);
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (
