@@ -3,60 +3,46 @@ import RecipeCard from "./Card";
 import { Button } from "react-bootstrap";
 
 const Posts = ({ articles }) => {
-  // console.log(articles);
-  // const [filter, setFilter] = useState();
+  const [filter, setFilter] = useState("Allrecipes");
 
-  // const handleOnclick = () => {
-  //   if (articles.fields.category === "breakfast") {
-  //     setFilter(breakfast);
-  //     return filter;
-  //   }
-  //   if (articles.fields.category === "dinner") {
-  //     setFilter(dinner);
-  //     return filter;
-  //   }
-  //   if (articles.fields.category === "lunch") {
-  //     setFilter(lunch);
-  //     return filter;
-  //   }
-  //   handleOnclick();
-  // };
+  function handleOnClick(event) {
+    setFilter(event.target.id);
+    return;
+  }
+  console.log(filter);
 
   return (
     <div>
-      {/* <Wrapper>
-        {articles.category === "breakfast" && (
-          setCategory(breakfast)
-          <div>
-            {articles.map((article, index) => (
-              <RecipeCard article={article} key={index} />
-            ))}
-          </div>
-        )}
-        <Button variant="outline-secondary">breakfast</Button>
-      </Wrapper> */}
       <Button
-        onClick={() => {
-          articles
-            .filter((article) => article.fields.category === "Lunch")
-            .map((article, index) => (
-              <RecipeCard article={article} key={index} />
-            ));
-          console.log(articles);
-        }}
+        onClick={handleOnClick}
+        id="Breakfast"
         variant="outline-secondary"
       >
+        breakfast
+      </Button>
+      <Button onClick={handleOnClick} id="Lunch" variant="outline-secondary">
         lunch
       </Button>
-      <Button variant="outline-secondary">dinner</Button>
-      <Button variant="outline-secondary">all recipes</Button>
+      <Button onClick={handleOnClick} id="Dinner" variant="outline-secondary">
+        dinner
+      </Button>
+      <Button
+        onClick={handleOnClick}
+        id="Allrecipes"
+        variant="outline-secondary"
+      >
+        all recipes
+      </Button>
       <div>
-        {articles
-          .filter((article) => article.fields.category === "Lunch")
-          .map((article, index) => (
-            <RecipeCard article={article} key={index} />
-          ))}
-        console.log(articles)
+        {filter === "Allrecipes"
+          ? articles.map((article, index) => (
+              <RecipeCard article={article} key={index} />
+            ))
+          : articles
+              .filter((article) => article.fields.category === filter)
+              .map((article, index) => (
+                <RecipeCard article={article} key={index} />
+              ))}
       </div>
     </div>
   );
