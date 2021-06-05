@@ -3,18 +3,17 @@ import marked from "marked";
 import { useParams } from "react-router-dom";
 
 const Recipe = ({ articles }) => {
+  window.scrollTo(0, 0);
   const { recipeName } = useParams();
-  let myRecipe
-  articles && articles.map((article) => {
-    if(
-      article.fields.name === recipeName
-    ){
-      myRecipe = article.fields
-      return myRecipe
-    }
-  })
-  //.field.name = recipeName
-  //console.log(article);
+  let myRecipe;
+  articles &&
+    articles.map((article) => {
+      if (article.fields.name === recipeName) {
+        myRecipe = article.fields;
+        return myRecipe;
+      }
+    });
+
   const {
     name,
     featuredImage,
@@ -24,8 +23,6 @@ const Recipe = ({ articles }) => {
     time,
     category,
   } = myRecipe;
-  //const { id } = article.sys;
-  //console.log(id);
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (
