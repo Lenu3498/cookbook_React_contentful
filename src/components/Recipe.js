@@ -8,13 +8,14 @@ const Recipe = ({ articles }) => {
   let myRecipe;
   articles &&
     articles.map((article) => {
-      if (article.fields.name === recipeName) {
+      if (article.fields.slug === recipeName) {
         myRecipe = article.fields;
         return myRecipe;
       }
     });
 
   const {
+    slug,
     name,
     featuredImage,
     shortDescription,
@@ -23,6 +24,7 @@ const Recipe = ({ articles }) => {
     time,
     category,
   } = myRecipe;
+  console.log(myRecipe.slug)
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (

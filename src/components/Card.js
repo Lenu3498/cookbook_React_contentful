@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const RecipeCard = ({ article }) => {
   console.log(article);
-  const { name, featuredImage, shortDescription } = article.fields;
+  const { name, featuredImage, shortDescription, slug } = article.fields;
   const { id } = article.sys;
   console.log(id);
   return (
@@ -24,7 +24,7 @@ const RecipeCard = ({ article }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{shortDescription}</Card.Text>
-          <Link to={`/${name}`}>
+          <Link to={`/${slug}`}>
             <Button variant="outline-secondary">Cook me</Button>
           </Link>
         </Card.Body>
