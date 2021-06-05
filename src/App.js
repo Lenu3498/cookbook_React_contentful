@@ -3,9 +3,8 @@ import "./App.css";
 import { client } from "./client";
 import Posts from "./components/Posts";
 import About from "./components/About";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Recipe from "./components/Recipe";
-
 
 class App extends React.Component {
   state = {
@@ -24,7 +23,6 @@ class App extends React.Component {
           articles: response.items,
           loading: false,
         });
-
       })
       .catch(console.error);
   }
@@ -40,7 +38,9 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <h1>Cookbook</h1>
+            <Link exact to="/" activeClassName="active">
+              <h1>Cookbook</h1>
+            </Link>
           </header>
           <main>
             <Switch>
@@ -58,6 +58,9 @@ class App extends React.Component {
             </Switch>
           </main>
           <footer>
+            <Link to="/about" activeClassName="active">
+              About
+            </Link>
             <p>© 2021 Cookbook 2.0</p>
           </footer>
         </div>
