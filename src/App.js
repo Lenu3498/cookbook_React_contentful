@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css";
 import { client } from "./client";
 import Posts from "./components/Posts";
-
 import About from "./components/About"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Recipe from "./components/Recipe";
 
 
 class App extends React.Component {
@@ -16,7 +16,7 @@ class App extends React.Component {
   //const [isLoading, setIsloading] = useState(true);
 
   componentDidMount() {
-    
+
     client
       .getEntries()
       .then((response) => {
@@ -25,7 +25,7 @@ class App extends React.Component {
           articles: response.items,
           loading: false,
         });
-        
+
       })
       .catch(console.error);
   }
@@ -50,6 +50,9 @@ class App extends React.Component {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/:recipeName">
+          <Recipe articles={this.state.articles} />
         </Route>
         </Switch>
         </main>

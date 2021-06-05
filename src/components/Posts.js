@@ -11,11 +11,7 @@ const Posts = ({ posts }) => {
           <RecipeCard article={article} key={index} />
         ))}
       </div>
-      <div>
-          {posts.map((article, index) => (
-            <Recipe article={article} key={index} />
-          ))}
-        </div>
+      
      </div>
   );
 };
