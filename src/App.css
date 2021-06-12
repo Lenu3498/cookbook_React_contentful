@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Lato', sans-serif;
-  
+
 }
 
 header {
@@ -14,14 +14,12 @@ header {
   top: 0px;
   min-width: 100%;
   z-index: 1;
-  
+
 }
 
-
-main {
+/*main {
   position: relative;
-  
-}
+}*/
 
 footer {
   position: fixed;
@@ -34,6 +32,7 @@ footer {
   font-size: 12px;
   padding-top: 7px;
   padding-bottom: 7px;
+  opacity: 0.8;
 }
 
 a:hover {
@@ -45,4 +44,3 @@ a {
   color: white;
   text-decoration: none;
 }
-

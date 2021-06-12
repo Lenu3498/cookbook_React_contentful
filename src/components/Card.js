@@ -1,14 +1,11 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import './Card.css';
 import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ article }) => {
   const { name, featuredImage, shortDescription, slug } =
     article.fields;
-  const { id } = article.sys;
-
   return (
     <Card className="CardBox">
       <Card.Img

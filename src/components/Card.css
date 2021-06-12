@@ -7,10 +7,10 @@
 
 .CardBox {
   width: 300px;
-  margin: none;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .Card__title {
 font-weight: bold;
 }
-
