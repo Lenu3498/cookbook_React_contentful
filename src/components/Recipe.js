@@ -12,7 +12,7 @@ const Recipe = ({ articles }) => {
       if (article.fields.slug === recipeName) {
         myRecipe = article.fields;
         return myRecipe;
-      }
+      } return null
     });
 
   const {
