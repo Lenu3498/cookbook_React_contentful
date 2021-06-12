@@ -10,41 +10,39 @@ const Posts = ({ articles }) => {
     setFilter(event.target.id);
     return;
   }
-  console.log(filter);
-
   return (
     <div>
       <div className="Button__Container">
         <Button
           onClick={handleOnClick}
           id="Breakfast"
-          variant="outline-secondary"
+          variant="light"
         >
           breakfast
         </Button>
         <Button
           onClick={handleOnClick}
           id="Lunch"
-          variant="outline-secondary"
+          variant="light"
         >
           lunch
         </Button>
         <Button
           onClick={handleOnClick}
           id="Dinner"
-          variant="outline-secondary"
+          variant="light"
         >
           dinner
         </Button>
         <Button
           onClick={handleOnClick}
           id="Allrecipes"
-          variant="outline-secondary"
+          variant="light"
         >
           all recipes
         </Button>
       </div>
-      <div className="recipeCard_Container">
+      <div className="Posts_Container">
         {filter === 'Allrecipes'
           ? articles.map((article, index) => (
               <RecipeCard article={article} key={index} />

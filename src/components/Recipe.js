@@ -16,7 +16,6 @@ const Recipe = ({ articles }) => {
     });
 
   const {
-    slug,
     name,
     featuredImage,
     shortDescription,

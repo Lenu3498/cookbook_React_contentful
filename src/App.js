@@ -17,13 +17,10 @@ class App extends React.Component {
     loading: true,
   };
 
-  //const [isLoading, setIsloading] = useState(true);
-
   componentDidMount() {
     client
       .getEntries()
       .then((response) => {
-        // console.log(response);
         this.setState({
           articles: response.items,
           loading: false,
@@ -43,7 +40,7 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <header>
-            <Link exact to="/">
+            <Link to="/">
               <h1>Cookbook</h1>
             </Link>
           </header>
