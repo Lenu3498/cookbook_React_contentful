@@ -1,6 +1,7 @@
-import React from "react";
-import marked from "marked";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import marked from 'marked';
+import { useParams } from 'react-router-dom';
+import './Recipe.css';
 
 const Recipe = ({ articles }) => {
   window.scrollTo(0, 0);
@@ -24,25 +25,38 @@ const Recipe = ({ articles }) => {
     time,
     category,
   } = myRecipe;
-  console.log(myRecipe.slug)
+  console.log(myRecipe.slug);
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (
-    <div>
-      <h2>{myRecipe.name} </h2>
-      <p>{time} Minutes</p>
-      <p>{shortDescription}</p>
-      {featuredImage && (
-        <img
-          src={featuredImage.fields.file.url}
-          alt={name}
-          title={name}
-          width="400"
-        />
-      )}
-      <section dangerouslySetInnerHTML={{ __html: recipeIngredients }} />
-      <section dangerouslySetInnerHTML={{ __html: postDescription }} />
-      <p>{category}</p>
+    <div className="recipeCard_Container">
+      <div className="recipe__upperText">
+        <p>{category}</p>
+        <h2>{myRecipe.name} </h2>
+        <p>{time} Minutes</p>
+        <p>{shortDescription}</p>
+      </div>
+      <div className="recipe__container">
+        <div className="recipeImg__container">
+          {' '}
+          {featuredImage && (
+            <img
+              src={featuredImage.fields.file.url}
+              alt={name}
+              title={name}
+              width="400"
+            />
+          )}
+        </div>
+        <div className="recipe__instructions">
+          <section
+            dangerouslySetInnerHTML={{ __html: recipeIngredients }}
+          />
+          <section
+            dangerouslySetInnerHTML={{ __html: postDescription }}
+          />
+        </div>
+      </div>
     </div>
   );
 };

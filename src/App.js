@@ -1,10 +1,15 @@
-import React from "react";
-import "./App.css";
-import { client } from "./client";
-import Posts from "./components/Posts";
-import About from "./components/About";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Recipe from "./components/Recipe";
+import React from 'react';
+import './App.css';
+import { client } from './client';
+import Posts from './components/Posts';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+} from 'react-router-dom';
+import Recipe from './components/Recipe';
 
 class App extends React.Component {
   state = {
@@ -30,15 +35,15 @@ class App extends React.Component {
   render() {
     return this.state.loading ? (
       <img
-        src={process.env.PUBLIC_URL + "/loading-pizza.gif"}
+        src={process.env.PUBLIC_URL + '/loading-pizza.gif'}
         alt="LoadingPizza"
-        style={{ margin: "15% 40%" }}
+        style={{ margin: '15% 40%' }}
       />
     ) : (
       <Router>
         <div className="App">
           <header>
-            <Link to="/">
+            <Link exact to="/">
               <h1>Cookbook</h1>
             </Link>
           </header>

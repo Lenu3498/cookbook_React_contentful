@@ -1,0 +1,43 @@
+.recipeCard_Container {
+  /* border: solid 5px red; */
+  justify-content: space-around;
+}
+
+.recipe__upperText {
+  border: solid 3px blue;
+}
+
+.recipe__container {
+  border: solid 2px green;
+  width: 100%;
+}
+
+.recipe__instructions {
+  background-color: hotpink;
+  width: 60%;
+}
+
+.recipeImg__container {
+  border: solid 5px yellow;
+  width: 40%;
+}
+
+.recipeImg__container img {
+  width: 100%;
+  height: auto;
+}
+
+li {
+    display: inline-block;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .recipe__container {
+      display: flex;
+      flex-direction: row;
+      
+    }
+
+  
+  }

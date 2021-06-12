@@ -1,10 +1,26 @@
 .App {
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  
 }
+
 header {
+  /* background-image: url("img/header-food-nutrition-01-710x200.jpg"); */
   background-color: black;
-  color: white;
+  opacity: 0.8;
+  color: black;
   min-height: 40px;
+  position: sticky;
+  top: 0px;
+  min-width: 100%;
+  z-index: 1;
+  
+}
+
+
+main {
+  position: relative;
+  
 }
 
 footer {
@@ -19,3 +35,14 @@ footer {
   padding-top: 7px;
   padding-bottom: 7px;
 }
+
+a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
