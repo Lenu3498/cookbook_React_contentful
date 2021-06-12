@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className='aboutBody'>
     <h2>About</h2>
-    <p>This recipe website was build as part of an academic exercise. The technologies used are: HTML, CSS, JavaScript, React, Contentful, Vercel.
+    <p>This recipe website was build as part of an academic exercise. The technologies used are: HTML, CSS, JavaScript, React, Bootstrap for React 5.0, Google Fonts, Contentful, Vercel.
          Here you can visit the <a href=' https://github.com/loremipsum-20/cookbook-2.0'>GitHub Repository.</a></p>
     <p>The developers team is:</p>
     <a className='devId' href="https://github.com/loremipsum-20"> <img
