@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import RecipeCard from './Card';
+import RecipeCard from './RecipeCard';
 import { Button } from 'react-bootstrap';
-import './Posts.css';
+import './RecipeList.css';
 
-const Posts = ({ articles }) => {
+const RecipeList = ({ articles }) => {
   const [filter, setFilter] = useState('Allrecipes');
 
   function handleOnClick(event) {
+    window.scrollTo(0, 0);
     setFilter(event.target.id);
     return;
   }
   return (
     <div>
-      <div className="Button__Container">
+      <div className="ButtonContainer">
         <Button
           onClick={handleOnClick}
           id="Breakfast"
@@ -42,7 +43,7 @@ const Posts = ({ articles }) => {
           all recipes
         </Button>
       </div>
-      <div className="Posts_Container">
+      <div className="PostsContainer">
         {filter === 'Allrecipes'
           ? articles.map((article, index) => (
               <RecipeCard article={article} key={index} />
@@ -57,4 +58,4 @@ const Posts = ({ articles }) => {
   );
 };
 
-export default Posts;
+export default RecipeList;

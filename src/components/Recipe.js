@@ -28,15 +28,15 @@ const Recipe = ({ articles }) => {
   const postDescription = marked(description);
   const recipeIngredients = marked(ingredientsList);
   return (
-    <div className="recipeCard_Container">
-      <div className="recipe__upperText">
+    <div>
+      <div>
         <p>{category}</p>
         <h2>{myRecipe.name} </h2>
         <p>{time} Minutes</p>
         <p>{shortDescription}</p>
       </div>
-      <div className="recipe__container">
-        <div className="recipeImg__container">
+      <div className="Recipe">
+        <div className="RecipeImgContainer">
           {' '}
           {featuredImage && (
             <img
@@ -47,7 +47,7 @@ const Recipe = ({ articles }) => {
             />
           )}
         </div>
-        <div className="recipe__instructions">
+        <div className="RecipeInstructions">
           <section
             dangerouslySetInnerHTML={{ __html: recipeIngredients }}
           />

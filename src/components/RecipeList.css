@@ -1,31 +1,31 @@
-.Button__Container {
+.ButtonContainer {
+  margin: 0 auto;
+  margin-bottom: 5px;
   position: fixed;
-  min-width: 100%;
+  top: 30;
+  left: 15%;
+  right: 15%;
+  max-width: 70%;
+  background-color: white;
   height: auto;
   z-index: 1;
-
 }
-
 
 button {
   margin: 5px;
 }
 
-button:hover {
-    color: grey;
-}
 
 @media only screen and (min-width: 768px) {
     main {
       display: flex;
-      flex-direction: row;
-
+      flex-direction: row
     }
-    .Posts_Container {
+    .PostsContainer {
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     justify-content: space-around;
+     justify-content: center;
     }
 
 

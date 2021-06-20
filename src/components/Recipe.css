@@ -1,47 +1,17 @@
-.recipeCard_Container {
-  /*justify-content: space-around;*/
-  max-width: 400px;
-  margin: 0 auto;
-}
-/*
-.recipe__upperText {
-  border: solid 3px blue;
-}
-
-.recipe__container {
-  border: solid 2px green;
-  width: 100%;
-}*/
-
-.recipe__instructions {
+.RecipeInstructions {
   text-align: left;
 }
 
-.recipeImg__container {
+.RecipeImgContainer {
   margin-bottom: 10px;
 }
-/*
-.recipeImg__container img {
-  width: 100%;
-  height: auto;
-}
-
-li {
-    display: inline-block;
-}*/
-
 
 @media only screen and (min-width: 768px) {
-  .recipeCard_Container {
-    max-width: 900px;
-  }
-    .recipe__container {
+    .Recipe {
       display: flex;
       flex-direction: row;
     }
-    .recipeImg__container {
-      margin-right: 30px;
+    .RecipeImgContainer {
+      margin-right: 20px;
     }
-
-
   }
