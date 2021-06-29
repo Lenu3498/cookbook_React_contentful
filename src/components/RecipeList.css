@@ -38,10 +38,17 @@ button {
 
     .ButtonContainer {
     position: fixed;
+    left: 10%;
+    right: 10%;
+    width: 80%;
     }
 
     .CardBox {
       margin-left: 5px;
       margin-right: 5px;
+    }
+    main {
+      margin: 0 auto;
+      margin-bottom: 130px;
     }
   }

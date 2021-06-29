@@ -20,13 +20,13 @@ font-weight: bold;
   position: relative;
 }
 
-.Card-Text {
-  margin-bottom: 50px;
+.CardText {
+  margin-bottom: 40px;
 }
+
 .CardButton {
   position: absolute;
   bottom: 0;
   left: 35%;
   right: 35%;
-
 }

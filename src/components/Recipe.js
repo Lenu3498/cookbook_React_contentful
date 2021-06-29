@@ -29,7 +29,7 @@ const Recipe = ({ articles }) => {
   const recipeIngredients = marked(ingredientsList);
   return (
     <div>
-      <div>
+      <div className="RecipeIntroduction">
         <p>{category}</p>
         <h2>{myRecipe.name} </h2>
         <p>{time} Minutes</p>
