@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import './Card.css';
+import './RecipeCard.css';
 import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ article }) => {
@@ -14,11 +14,11 @@ const RecipeCard = ({ article }) => {
         alt={name}
         title={name}
       />
-      <Card.Body>
-        <Card.Title className="Card__title">{name}</Card.Title>
-        <Card.Text>{shortDescription}</Card.Text>
+      <Card.Body className="CardBody">
+        <Card.Title className="CardTitle">{name}</Card.Title>
+        <Card.Text className="CardText">{shortDescription}</Card.Text>
         <Link to={`/${slug}`}>
-          <Button variant="outline-secondary">Cook me</Button>
+          <Button variant="outline-secondary" className="CardButton">Cook me</Button>
         </Link>
       </Card.Body>
     </Card>

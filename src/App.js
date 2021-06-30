@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { client } from './client';
-import Posts from './components/Posts';
+import RecipeList from './components/RecipeList';
 import About from './components/About';
 import {
   BrowserRouter as Router,
@@ -16,6 +16,7 @@ class App extends React.Component {
     articles: [],
     loading: true,
   };
+
 
   componentDidMount() {
     client
@@ -48,7 +49,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/">
                 <div>
-                  <Posts articles={this.state.articles} />
+                  <RecipeList articles={this.state.articles}/>
                 </div>
               </Route>
               <Route path="/about">
